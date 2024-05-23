@@ -1,0 +1,19 @@
+.rowboat {
+    height: 100vh
+}
+
+.blogging{
+    height: 350px;
+}
+
+.imaging {
+    background-image: url("../images/voodoo.jpg");
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+h1 {
+    color: aquamarine;
+    justify-content: center;
+}
