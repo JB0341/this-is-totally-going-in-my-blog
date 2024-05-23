@@ -1,1 +1,26 @@
+header {
+    color: aqua;
+    background-color: gray;
+    text-align: center;
+    font-size: 250%;
+    padding:0%
+}
+
+h1, h6 {
+    text-decoration: none;
+}
+
+.blogging {
+    height: 50vh;
+}
+
+p {
+
+}
+
+.footsie {
+    
+}
+
+
 
