@@ -36,4 +36,4 @@ the second was directly tied to the blog.html page. its purpose was to retrieve 
 
 repository link https://github.com/JB0341/this-is-totally-going-in-my-blog
 
-deployed link 
+deployed link https://jb0341.github.io/this-is-totally-going-in-my-blog/
