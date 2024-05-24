@@ -14,21 +14,16 @@ let blogs = []
 
 function renderBlogging() {
     const data = JSON.parse(localStorage.getItem('blogs'));
-    console.log(data);
 
     for(let i = 0; i < blogs.length; i++) {
-        blogs[i].username
-
-        const infoEl = `
-        <div class="border border-5 blogging">
-            <h3>${blogs[i].title}</h3>
-            <p>${blogs[i].content}</p>
-            <div>
-                ${blogs[i].username}
-            </div>
-        </div>
-        `;
-        holderEl.innerHTML = holderEl.innerHTML + infoEl;
+        const newSection = $('<section>');
+        newSection.addClass('new-container')
+        dis.append(newSection);
+        newSection.append(`
+        <h3 class="bippity">${blogs[i].title}</h3>
+        <p class="boppity">${blogs[i].content}</p>
+        <h5 class="boo">${blogs[i].username}</h5>
+        `);
     }
 }
 
