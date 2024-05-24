@@ -1,29 +1,24 @@
-const divTags = document.querySelectorAll('div');
-const bodyTags = document.querySelectorAll('body');
-const headerTags = document.querySelectorAll('body');
 const username = document.getElementById('username');
 const title = document.getElementById('title');
 const content = document.getElementById('content');
-const pTags = document.getElementById('p');
-const dis = document.getElementById('dis');
-const dat = document.getElementById('dat');
-const dippity = document.getElementById('dippity');
+const dis = $('#dis');
 const holderEl = document.getElementById('holder');
 
 let blogs = []
 
 function renderBlogging() {
-    const blogData = JSON.parse(localStorage.getItem('blogs'));
+    let blogData = JSON.parse(localStorage.getItem('blogs')) || [];
 
     for(let i = 0; i < blogData.length; i++) {
-        const newSection = $('<section>');
-        newSection.addClass('new-container');
-        dis.append(newSection);
-        newSection.append(`
-        <h3 class="bippity">${blogData[i].title}</h3>
-        <p class="boppity">${blogData[i].content}</p>
-        <h5 class="boo">Posted by: ${blogData[i].username}</h5>
-        `);
+        const newContent = `
+        <div class="border border-5 border-dark">
+            <h3 class="border-bottom border-5 border-dark">${blogData[i].title}</h3>
+            <p>${blogData[i].content}</p>
+            <h5>Posted by: ${blogData[i].username}</h5>
+        </div>
+        `;
+
+        dis.append(newContent);
     }
 }
 
