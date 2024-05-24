@@ -13,16 +13,16 @@ const holderEl = document.getElementById('holder');
 let blogs = []
 
 function renderBlogging() {
-    const data = JSON.parse(localStorage.getItem('blogs'));
+    const blogData = JSON.parse(localStorage.getItem('blogs'));
 
-    for(let i = 0; i < blogs.length; i++) {
+    for(let i = 0; i < blogData.length; i++) {
         const newSection = $('<section>');
-        newSection.addClass('new-container')
+        newSection.addClass('new-container');
         dis.append(newSection);
         newSection.append(`
-        <h3 class="bippity">${blogs[i].title}</h3>
-        <p class="boppity">${blogs[i].content}</p>
-        <h5 class="boo">${blogs[i].username}</h5>
+        <h3 class="bippity">${blogData[i].title}</h3>
+        <p class="boppity">${blogData[i].content}</p>
+        <h5 class="boo">Posted by: ${blogData[i].username}</h5>
         `);
     }
 }
